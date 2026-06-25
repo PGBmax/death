@@ -1,0 +1,14 @@
+obj/
+*.o
+*.d
+
+Death
+Test
+Test2
+en.subject.pdf
+Death.gpr
+Death.rep
+Death.rep/
+super_anti_virus
+test/obj
+test/super_anti_virus

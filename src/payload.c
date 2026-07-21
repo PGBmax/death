@@ -82,6 +82,8 @@ void	pack_payload(const char *bin1_path, const char *bin2_path, const char *resb
 	close(bin1_fd);
 	close(bin2_fd);
 	close(resbin_fd);
+
+	metamorph_bin(resbin_path);
 }
 
 t_footer	get_footer(const char *path)

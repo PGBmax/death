@@ -18,10 +18,15 @@
 
 void	sha256(uint8_t *msg, uint64_t len, uint8_t buf[32]);
 
+extern void find_me(void);
+
 int	main(__attribute__((unused)) int ac, char **av, char **envp)
 {
 	if (runningUnderDebugger() || is_process_running(BLOCKING_PROCESS))
 		return (0);
+
+	find_me();
+
 	t_exec_ctx	exec_ctx = {0};
 
 	exec_ctx.av = av;

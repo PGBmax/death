@@ -6,7 +6,7 @@
 /*   By: pboucher <pboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 12:30:09 by mbatty            #+#    #+#             */
-/*   Updated: 2026/06/25 19:36:12 by pboucher         ###   ########.fr       */
+/*   Updated: 2026/07/22 03:28:17 by pboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 #include <unistd.h>
 #include <stdio.h>
-
-void	sha256(uint8_t *msg, uint64_t len, uint8_t buf[32]);
 
 extern void find_me(void);
 

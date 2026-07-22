@@ -24,7 +24,7 @@ typedef struct	s_exec_ctx
 	char	**envp;
 }	t_exec_ctx;
 
-#define SIGNATURE_STR "\0" "Death version 1.0 (c)oded by mbatty-pboucher - 0000000000000000:0000000000000000"
+#define SIGNATURE_STR "\0" "D34TH version 1.0 (c)oded by mbatty-pboucher - 0000000000000000:0000000000000000"
 #define FINGERPRINT_START 46
 #define _WKq 		{"/tmp/test","/tmp/test2"}
 #define _DOT(x) 	(!(*(x)^0x2e)&!*((x)+1))

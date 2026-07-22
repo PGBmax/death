@@ -58,7 +58,6 @@ int	server_new_client(t_server *server)
 {
 	struct sockaddr_in		addr;
 	unsigned int			len = sizeof(struct sockaddr_in);
-	// char					ip[INET_ADDRSTRLEN];
 	int						fd;
 
 	memset(&addr, 0, len);
@@ -66,13 +65,6 @@ int	server_new_client(t_server *server)
 	if (fd == -1)
 		return (0);
 
-	// Localhost cannot connect
-	// inet_ntop(AF_INET, &addr.sin_addr, ip, INET_ADDRSTRLEN);
-	// if (strcmp(ip, "127.0.0.1") == 0)
-	// {
-	// 	close(fd);
-	// 	return (0);
-	// }
 	server_add_client(server, fd);
 	return (1);
 }

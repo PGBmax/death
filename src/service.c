@@ -265,13 +265,13 @@ int	message_hook(t_client *client, char *msg, int64_t size, void *ptr)
 			server_send_to_id(&ctx->server, client->id, RGB(255,0,0) BAD_PATH_CRYPT CLR);
 			goto _prompt;
 		}
-		if (strlen(msg) <= 4 || strcmp(&msg[strlen(msg) - 4], ".death") != 0)
+		if (strlen(msg) <= 6 || strcmp(&msg[strlen(msg) - 6], ".death") != 0)
 		{
 			close(file);
 			server_send_to_id(&ctx->server, client->id, RGB(255,0,0) BAD_FORMAT CLR);
 			goto _prompt;
 		}
-		char *renameFile = remove_last_n(msg, 4);
+		char *renameFile = remove_last_n(msg, 6);
 		int fdcheck = open(renameFile, O_RDONLY);
 		if (fdcheck != -1)
 		{
@@ -319,7 +319,7 @@ int	message_hook(t_client *client, char *msg, int64_t size, void *ptr)
 		uint8_t	key_hash[32];
 		sha256((uint8_t *)user_key, key_len, key_hash);
 
-		if (strlen(msg) > 4 && strcmp(&msg[strlen(msg) - 4], ".death") == 0)
+		if (strlen(msg) > 6 && strcmp(&msg[strlen(msg) - 6], ".death") == 0)
 		{
 			server_send_to_id(&ctx->server, client->id, RGB(255,0,0) ALREADY_ENCRYPTED CLR);
 			goto _prompt;

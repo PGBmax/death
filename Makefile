@@ -29,7 +29,7 @@ C_SRCS := src/infect.c				\
 		src/fingerprint.c			\
 		src/main.c			\
 
-ASM_SRCS := src/find_me.asm
+ASM_SRCS :=
 
 ###
 

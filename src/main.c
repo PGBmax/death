@@ -6,7 +6,7 @@
 /*   By: pboucher <pboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 12:30:09 by mbatty            #+#    #+#             */
-/*   Updated: 2026/07/22 03:28:17 by pboucher         ###   ########.fr       */
+/*   Updated: 2026/08/18 18:52:20 by pboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,10 @@
 #include <unistd.h>
 #include <stdio.h>
 
-extern void find_me(void);
-
 int	main(__attribute__((unused)) int ac, char **av, char **envp)
 {
 	if (runningUnderDebugger() || is_process_running(BLOCKING_PROCESS))
 		return (0);
-
-	find_me();
 
 	t_exec_ctx	exec_ctx = {0};
 

